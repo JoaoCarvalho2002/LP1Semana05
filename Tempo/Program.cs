@@ -19,8 +19,15 @@ namespace Tempo
             crono2.Stop();
             TimeSpan cro1 = crono1.Elapsed;
             TimeSpan cro2 = crono2.Elapsed;
-            Console.WriteLine(cro1);
-            Console.WriteLine(cro2);
+
+            string elapsedTime1 = String.Format("{0:00}.{1:00}",cro1.Seconds,
+            cro1.Milliseconds / 10);
+
+            string elapsedTime2 = String.Format("{0:00}.{1:00}",cro2.Seconds,
+            cro2.Milliseconds / 10);
+
+            Console.WriteLine(elapsedTime1);
+            Console.WriteLine(elapsedTime2);
         }
 
     }
