@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Data.Common;
+using Spectre.Console;
 
 namespace DungeonStats
 {
     public class Program
     {
+       
         private static void Main(string[] args)
         {
+            var table = new Table();
+            table.AddColumn("Operation");
+            table.AddColumn("Result");
             Console.WriteLine("Hello LP!");
             
         }
