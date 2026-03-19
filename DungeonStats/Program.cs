@@ -12,7 +12,20 @@ namespace DungeonStats
             var table = new Table();
             table.AddColumn("Operation");
             table.AddColumn("Result");
-            Console.WriteLine("Hello LP!");
+
+            
+            string value=Console.ReadLine();
+            int valueint=Int32.Parse(value);
+            int value2int=2;
+            
+            Damage(valueint,value2int);
+            Damage(valueint);
+            CriticalHit(valueint);
+
+            table.AddRow("Damage",value);
+            table.AddRow("Damage", value);
+            table.AddRow("CriticalHit", value);
+            AnsiConsole.Write(table);
             
         }
         private static int Damage(int attack, int defense)
